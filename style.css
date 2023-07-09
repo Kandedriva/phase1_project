@@ -48,3 +48,23 @@ img{
    border-radius: 5px;
 
 }
+
+.bttn{
+    /* background-color: rgb(86, 157, 238); */
+    margin: 5px;
+    border-radius: 5px;
+    padding: 3px;
+    /* color: white; */
+}
+
+footer{
+    text-align: center;
+    margin-top: 15%;
+    padding: 25px;
+    background-color: aquamarine;
+}
+
+.fa-brands{
+    margin: 25px;
+    padding: 5px;
+}
