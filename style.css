@@ -1,4 +1,32 @@
+
+h1{
+    color: blue;
+    text-align: center;
+}
+
 img{
     width: 15%;
     height: 15%;
+}
+
+.personalInfo{
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+.personInfo{
+    padding-left: 15px;
+    text-align: center;
+}
+.payementInfo{
+    text-align: center;
+    /* margin-top: 5%; */
+    margin-bottom: 5%;
+    padding-top: 20px;
+}
+
+
+.check{
+    margin-top: 30px;
 }

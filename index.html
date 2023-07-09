@@ -28,7 +28,44 @@
     </div>
     <hr>
 
-    
+    <!-- Checkout Form -->
+
+    <form action="" method="post" class="order" id="orderForm">
+        <div class="personalInfo">
+            <h3>personal Informations</h3>
+        <label for="fName">First name <br> <input class="personInfo" type="text" id="fName">
+        </label>
+        <label for="lName">Last name <br><input class="personInfo" type="text" id="lName">
+        </label>
+        <label for="email">email <br><input class="personInfo" type="email" id="email">
+        </label>
+        </div>
+        <div class="payementInfo">
+
+                <h2>Billing address</h2>
+
+                <label for="street">Street: <br><input type="text" id="street" name="street" required placeholder="Street" autocomplete="address-level1">
+                </label>
+
+                <label for="city">City: <br><input type="text" id="city" name="city" required placeholder="City">
+                </label>
+
+                <label for="state">State: <br><input type="text" id="state" name="state" required placeholder="State">
+                </label>
+
+                <label for="zip">Zip Code: <br><input type="text" id="zip" name="zip" required placeholder="PostalCode">
+                </label>
+
+                <label for="country">Country: <br><input type="text" id="country" name="country" required>
+                </label><br>
+                <label for="NumberOfOrder">Quantity <br><input type="number" id="NumberOfOrder" class="numbOrder"></label><br>
+                <label for="creditCard">Credit card number <br><input type="number" id="creditCard">
+
+                </label><br>
+
+            <button class=" check btn btn-primary">Checkout</button>
+        </div>
+    </form>
 
     
     <script src="app.js"></script>
