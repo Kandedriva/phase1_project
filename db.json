@@ -15,6 +15,29 @@
 
     ],
     "orders":[
+        {
+            "fName": "Shikan",
+            "lName": "Smith",
+            "email": "shikan123@gmail.com",
+            "street": "202",
+            "cityName": "New York",
+            "state": "NY",
+            "zipCode": "911",
+            "country": "United state",
+            "quantity": "5"
+        },
+        {
+            "fName": "Sim",
+            "lName": "Miller",
+            "email": "s4@gmail.com",
+            "street": "101",
+            "cityName": "New York",
+            "state": "NY",
+            "zipCode": "119",
+            "country": "United state",
+            "quantity": "4"
+        }
+    
 
     ],
     "subscribers":[

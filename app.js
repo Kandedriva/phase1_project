@@ -3,6 +3,9 @@ const orderForm = document.getElementById("orderForm");
 
 orderForm.style.visibility = "hidden";
 
+function createAnOrder(){
+
+}
 
 fetch(" http://localhost:3000/products")
 .then(response =>response.json())
@@ -76,4 +79,72 @@ fetch(" http://localhost:3000/products")
     })
    
     
+});
+
+fetch("http://localhost:3000/orders")
+.then(response=>response.json())
+.then(orders=>{
+    console.log(orders);
+
+    orders.forEach(order=>{
+        const firstName = document.createElement("p");
+        const lastName = document.createElement("p");
+        const email = document.createElement("p");
+        const street = document.createElement("p");
+        const city = document.createElement("p");
+        const state = document.createElement("p");
+        const country = document.createElement("p");
+        const zipCode = document.createElement("p");
+        const quantity = document.createElement("p");
+        const orderPlaced = document.getElementById("orderPlaced");
+        const address = document.createElement("div");
+        const eachOrderContainer = document.createElement("div");
+        eachOrderContainer.setAttribute("class", "eachOrder");
+
+        firstName.textContent = (" First Name: " + order.fName );
+        lastName.textContent = (" Last Nane: " + order.lName);
+        email.textContent = ("Email: " + order.email);
+        street.textContent = ("Street: " + order.street);
+        city.textContent = ("City: " + order.cityName);
+        state.textContent = ("State: " + order.state);
+        country.textContent = ("Country: " + order.country);
+        zipCode.textContent = ("Zip code: " + order.zipCode);
+        quantity.textContent = ("Quantity: " + order.quantity);
+
+        address.appendChild(street);
+        address.appendChild(city)
+        address.appendChild(state);
+        address.appendChild(country);
+        address.appendChild(zipCode)
+
+        eachOrderContainer.appendChild(firstName);
+        eachOrderContainer.appendChild(lastName);
+        eachOrderContainer.appendChild(email);
+        eachOrderContainer.appendChild(address);
+        eachOrderContainer.appendChild(quantity);
+
+        orderPlaced.appendChild(eachOrderContainer);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })
+
 })
+
