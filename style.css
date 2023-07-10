@@ -68,3 +68,14 @@ footer{
     margin: 25px;
     padding: 5px;
 }
+.describe{
+    padding-right: 3px;
+}
+.eachProdcut{
+    display: inline-block;
+    width: 35%;
+    height: 35%;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}

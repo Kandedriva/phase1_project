@@ -1,28 +1,36 @@
 const imageInfo = document.getElementById("imageInfo");
+const orderForm = document.getElementById("orderForm");
+
+orderForm.style.visibility = "hidden";
+
 
 fetch(" http://localhost:3000/products")
 .then(response =>response.json())
 .then(products=>{
     console.log(products);
     products.forEach(product=>{
+        const eachProductContainer = document.createElement("div");
         const productName = document.createElement("h5");
         const productImage = document.createElement("img");
         const productDescription = document.createElement("p");
         const price = document.createElement("p");
         const productsContainer = document.getElementById("products");
 
-        productsContainer.style.display = "inline-block"
+        eachProductContainer.setAttribute("class", "eachProdcut")
 
-        productImage.setAttribute("src", product.image)
+
+        productImage.setAttribute("src", product.image);
+        productDescription.style.paddingRight = "2px"
         productName.textContent = product.name;
         productDescription.textContent = product.description;
         price.textContent = product.price;
-        productsContainer.appendChild(productImage);
-        productsContainer.appendChild(productName);
-        productsContainer.appendChild(productDescription);
-        productsContainer.appendChild(price);
+        eachProductContainer.appendChild(productImage);
+        eachProductContainer.appendChild(productName);
+        eachProductContainer.appendChild(productDescription);
+        eachProductContainer.appendChild(price);
+        productsContainer.appendChild(eachProductContainer);
 
-        productImage.addEventListener("click", (event)=>{
+        eachProductContainer.addEventListener("click", (event)=>{
 
             imageInfo.innerHTML = "";
     
@@ -60,14 +68,7 @@ fetch(" http://localhost:3000/products")
     
         });
     
-        // imageInfo.style.display = "block";
-    
-        // if(displayedImage !==null){
-        //     displayedImage.style.display = "none";
-    
-        // }
-        // displayedImage = productImage;
-    
+       
     
     
     });
