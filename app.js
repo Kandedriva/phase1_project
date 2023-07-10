@@ -1,11 +1,64 @@
 const imageInfo = document.getElementById("imageInfo");
 const orderForm = document.getElementById("orderForm");
 const list = document.getElementById("followers");
+const form = document.getElementById("follow");
+// const newOrderName = document.getElementById("uName");
+// const newOrderEmail = document.getElementById("uEmail");
+const button = document.getElementById("button");
+const checkOutButton = document.getElementById("checkOutButton");
+const customerFName = document.getElementById("fName");
+const customerLName = document.getElementById("lName");
+const customerEamil = document.getElementById("email");
+const street = document.getElementById("street");
+const city = document.getElementById("city");
+const state = document.getElementById("state");
+const zipCode = document.getElementById("zip");
+const country = document.getElementById("country");
+const quantity = document.getElementById("quantity");
+
 
 
 orderForm.style.visibility = "hidden";
 
-function createAnOrder(){
+
+function createAnOrder(order){
+    const firstName = document.createElement("p");
+        const lastName = document.createElement("p");
+        const email = document.createElement("p");
+        const street = document.createElement("p");
+        const city = document.createElement("p");
+        const state = document.createElement("p");
+        const country = document.createElement("p");
+        const zipCode = document.createElement("p");
+        const quantity = document.createElement("p");
+        const orderPlaced = document.getElementById("orderPlaced");
+        const address = document.createElement("div");
+        const eachOrderContainer = document.createElement("div");
+        eachOrderContainer.setAttribute("class", "eachOrder");
+
+        firstName.textContent = (" First Name: " + order.name);
+        lastName.textContent = (" Last Name: " + order.lastName);
+        email.textContent = ("Email: " + order.newOrderEmail);
+        street.textContent = ("Street: " + order.newOrderStreet);
+        city.textContent = ("City: " + order.newOrderCity);
+        state.textContent = ("State: " + order.newOrderState);
+        country.textContent = ("Country: " + order.newOrderCountry);
+        zipCode.textContent = ("Zip code: " + order.newOrderZipCode);
+        quantity.textContent = ("Quantity: " + order.newOrderQuantity);
+
+        address.appendChild(street);
+        address.appendChild(city)
+        address.appendChild(state);
+        address.appendChild(country);
+        address.appendChild(zipCode)
+
+        eachOrderContainer.appendChild(firstName);
+        eachOrderContainer.appendChild(lastName);
+        eachOrderContainer.appendChild(email);
+        eachOrderContainer.appendChild(address);
+        eachOrderContainer.appendChild(quantity);
+
+        orderPlaced.appendChild(eachOrderContainer);
 
 }
 
@@ -69,67 +122,63 @@ fetch(" http://localhost:3000/products")
         btn2.addEventListener("click", ()=>{
             orderForm.style.visibility = "visible";
             form.style.display = "none";
-            productContainer.style.display = "none"
+            // productContainer.style.display = "none"
     
         });
-    
-       
-    
-    
+   
     });
 
     })
-   
     
 });
 
+// Get Resquest for Orders
 fetch("http://localhost:3000/orders")
 .then(response=>response.json())
 .then(orders=>{
     console.log(orders);
 
-    orders.forEach(order=>{
-        const firstName = document.createElement("p");
-        const lastName = document.createElement("p");
-        const email = document.createElement("p");
-        const street = document.createElement("p");
-        const city = document.createElement("p");
-        const state = document.createElement("p");
-        const country = document.createElement("p");
-        const zipCode = document.createElement("p");
-        const quantity = document.createElement("p");
-        const orderPlaced = document.getElementById("orderPlaced");
-        const address = document.createElement("div");
-        const eachOrderContainer = document.createElement("div");
-        eachOrderContainer.setAttribute("class", "eachOrder");
-
-        firstName.textContent = (" First Name: " + order.fName );
-        lastName.textContent = (" Last Name: " + order.lName);
-        email.textContent = ("Email: " + order.email);
-        street.textContent = ("Street: " + order.street);
-        city.textContent = ("City: " + order.cityName);
-        state.textContent = ("State: " + order.state);
-        country.textContent = ("Country: " + order.country);
-        zipCode.textContent = ("Zip code: " + order.zipCode);
-        quantity.textContent = ("Quantity: " + order.quantity);
-
-        address.appendChild(street);
-        address.appendChild(city)
-        address.appendChild(state);
-        address.appendChild(country);
-        address.appendChild(zipCode)
-
-        eachOrderContainer.appendChild(firstName);
-        eachOrderContainer.appendChild(lastName);
-        eachOrderContainer.appendChild(email);
-        eachOrderContainer.appendChild(address);
-        eachOrderContainer.appendChild(quantity);
-
-        orderPlaced.appendChild(eachOrderContainer);
-
-    })
+    orders.forEach(createAnOrder)
 
 });
+
+orderForm.addEventListener("submit", event=>{
+    event.preventDefault();
+
+// Create new Order
+const newOrders = {
+    name: customerFName.value,
+    lastName: customerLName.value,
+    newOrderEmail: customerEamil.value,
+    newOrderStreet: street.value,
+    newOrderCity: city.value,
+    newOrderState: state.value,
+    newOrderZipCode: zipCode.value,
+    newOrderCountry: country.value,
+    newOrderQuantity: quantity.value
+}
+
+// Post resquest for Orders
+fetch("http://localhost:3000/orders", {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newOrders),
+  })
+.then(response=>response.json())
+.then(orders=>{
+    console.log(orders);
+    createAnOrder(orders)  
+
+})
+
+orderForm.reset();
+orderForm.style.visibility = "hidden";
+
+});
+
+
 
 fetch("http://localhost:3000/subscribers")
 .then(response => response.json())
