@@ -102,7 +102,7 @@ fetch("http://localhost:3000/orders")
         eachOrderContainer.setAttribute("class", "eachOrder");
 
         firstName.textContent = (" First Name: " + order.fName );
-        lastName.textContent = (" Last Nane: " + order.lName);
+        lastName.textContent = (" Last Name: " + order.lName);
         email.textContent = ("Email: " + order.email);
         street.textContent = ("Street: " + order.street);
         city.textContent = ("City: " + order.cityName);

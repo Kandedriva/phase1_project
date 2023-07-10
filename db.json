@@ -41,6 +41,19 @@
 
     ],
     "subscribers":[
+        {
+            "userName": "Shikan's",
+            "email":"shikan123@gmail.com"
+            
+        },
+        {
+            "userName": "Tyson",
+            "email": "thebest@store.com"
+        },
+        {
+            "userName": "LeeYang",
+            "email": "yang2@yahoo.com"
+        }
 
     ]
 }
