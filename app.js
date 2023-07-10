@@ -1,5 +1,7 @@
 const imageInfo = document.getElementById("imageInfo");
 const orderForm = document.getElementById("orderForm");
+const list = document.getElementById("followers");
+
 
 orderForm.style.visibility = "hidden";
 
@@ -125,26 +127,24 @@ fetch("http://localhost:3000/orders")
 
         orderPlaced.appendChild(eachOrderContainer);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     })
 
+});
+
+fetch("http://localhost:3000/subscribers")
+.then(response => response.json())
+.then(subscribers =>{
+    console.log(subscribers);
+    subscribers.forEach(subscriber=>{
+        const liName = document.createElement("li");
+    const liEmail = document.createElement("p");
+
+liName.textContent = subscriber.userName;
+liEmail.textContent = subscriber.email;
+list.appendChild(liName);
+list.appendChild(liEmail);
+
+    })
 })
+
 
