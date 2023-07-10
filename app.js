@@ -20,7 +20,7 @@ const quantity = document.getElementById("quantity");
 
 orderForm.style.visibility = "hidden";
 
-
+// Funsction to Create New Orders
 function createAnOrder(order){
     const firstName = document.createElement("p");
         const lastName = document.createElement("p");
@@ -35,6 +35,10 @@ function createAnOrder(order){
         const address = document.createElement("div");
         const eachOrderContainer = document.createElement("div");
         eachOrderContainer.setAttribute("class", "eachOrder");
+        const deleteButton = document.createElement("button");
+
+        deleteButton.textContent = "Order completed";
+        deleteButton.setAttribute("class", "bttn")
 
         firstName.textContent = (" First Name: " + order.name);
         lastName.textContent = (" Last Name: " + order.lastName);
@@ -57,11 +61,23 @@ function createAnOrder(order){
         eachOrderContainer.appendChild(email);
         eachOrderContainer.appendChild(address);
         eachOrderContainer.appendChild(quantity);
+        eachOrderContainer.appendChild(deleteButton);
 
-        orderPlaced.appendChild(eachOrderContainer);
+            orderPlaced.appendChild(eachOrderContainer);
+            deleteButton.addEventListener("click", event=>{
+                eachOrderContainer.remove();
+                fetch(`http://localhost:3000/orders/${order.id}`, {method: "DELETE"})
+                 .then(response=>response.json())
+                  .then(data=>console.log(data))
+               
+            })
+
 
 }
 
+
+
+// Get request to render the products
 fetch(" http://localhost:3000/products")
 .then(response =>response.json())
 .then(products=>{
@@ -78,7 +94,7 @@ fetch(" http://localhost:3000/products")
 
 
         productImage.setAttribute("src", product.image);
-        productDescription.style.paddingRight = "2px"
+        // productDescription.style.paddingRight = "2px"
         productName.textContent = product.name;
         productDescription.textContent = product.description;
         price.textContent = product.price;
@@ -121,9 +137,7 @@ fetch(" http://localhost:3000/products")
         });
         btn2.addEventListener("click", ()=>{
             orderForm.style.visibility = "visible";
-            form.style.display = "none";
-            // productContainer.style.display = "none"
-    
+            form.style.display = "none";    
         });
    
     });
@@ -142,6 +156,7 @@ fetch("http://localhost:3000/orders")
 
 });
 
+// Create New Orders
 orderForm.addEventListener("submit", event=>{
     event.preventDefault();
 
@@ -158,7 +173,7 @@ const newOrders = {
     newOrderQuantity: quantity.value
 }
 
-// Post resquest for Orders
+// Post resquest for New Orders
 fetch("http://localhost:3000/orders", {
     method: 'POST',
     headers: {
@@ -170,16 +185,12 @@ fetch("http://localhost:3000/orders", {
 .then(orders=>{
     console.log(orders);
     createAnOrder(orders)  
-
 })
-
 orderForm.reset();
 orderForm.style.visibility = "hidden";
-
 });
 
-
-
+// Fetch for subscribers
 fetch("http://localhost:3000/subscribers")
 .then(response => response.json())
 .then(subscribers =>{
