@@ -17,10 +17,11 @@ const state = document.getElementById("state");
 const zipCode = document.getElementById("zip");
 const country = document.getElementById("country");
 const quantity = document.getElementById("quantity");
+const ProductName = document.getElementById("product-name");
 
 
 
-// orderForm.style.visibility = "hidden";
+orderForm.style.visibility = "hidden";
 
 // Funsction to Create New Orders
 function createAnOrder(order){
@@ -38,9 +39,10 @@ function createAnOrder(order){
         const eachOrderContainer = document.createElement("div");
         eachOrderContainer.setAttribute("class", "eachOrder");
         const deleteButton = document.createElement("button");
+        const item = document.createElement("h6");
 
         deleteButton.textContent = "Order completed";
-        deleteButton.setAttribute("class", "bttn btn btn-outline-danger")
+        deleteButton.setAttribute("class", "bttn btn btn-outline-danger");
 
         firstName.textContent = (" First Name: " + order.name);
         lastName.textContent = (" Last Name: " + order.lastName);
@@ -51,6 +53,7 @@ function createAnOrder(order){
         country.textContent = ("Country: " + order.newOrderCountry);
         zipCode.textContent = ("Zip code: " + order.newOrderZipCode);
         quantity.textContent = ("Quantity: " + order.newOrderQuantity);
+        item.textContent = ("Item: " + order.itemName);
 
         address.appendChild(street);
         address.appendChild(city)
@@ -58,11 +61,13 @@ function createAnOrder(order){
         address.appendChild(country);
         address.appendChild(zipCode)
 
+        eachOrderContainer.appendChild(item);
         eachOrderContainer.appendChild(firstName);
         eachOrderContainer.appendChild(lastName);
         eachOrderContainer.appendChild(email);
         eachOrderContainer.appendChild(address);
         eachOrderContainer.appendChild(quantity);
+        eachOrderContainer.appendChild(item);
         eachOrderContainer.appendChild(deleteButton);
 
 // Delete Request to delete an order
@@ -95,7 +100,6 @@ fetch(" http://localhost:3000/products")
 
 
         productImage.setAttribute("src", product.image);
-        // productDescription.style.paddingRight = "2px"
         productName.textContent = product.name;
         productDescription.textContent = product.description;
         price.textContent = product.price;
@@ -162,6 +166,7 @@ orderForm.addEventListener("submit", event=>{
 
 // Create new Order
 const newOrders = {
+    itemName: ProductName.value,
     name: customerFName.value,
     lastName: customerLName.value,
     newOrderEmail: customerEamil.value,
@@ -171,6 +176,7 @@ const newOrders = {
     newOrderZipCode: zipCode.value,
     newOrderCountry: country.value,
     newOrderQuantity: quantity.value
+
 }
 
 // Post resquest for New Orders

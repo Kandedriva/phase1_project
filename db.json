@@ -22,25 +22,26 @@
       "price": "$15.36"
     },
     {
-      "id":3,
+      "id": 3,
       "name": "adidas Unisex Defender 4 Small Duffel Bag",
-      "image":"images/Adidasbag.png",
+      "image": "images/Adidasbag.png",
       "description": "100% Polyester, Imported, 100% Recycled Polyester lining, 25 shoulder drop, Extra roomy main compartment that stands tall for easy packing",
       "price": "$21.00"
     }
   ],
   "orders": [
     {
-      "id": 0,
-      "name": "Shikan",
-      "lastName": "Smith",
-      "newOrderEmail": "shikan123@gmail.com",
-      "newOrderStreet": "202",
-      "newOrderCity": "New York",
-      "newOrderState": "NY",
-      "newOrderZipCode": "911",
-      "newOrderCountry": "United state",
-      "newOrderQuantity": "5"
+      "itemName": "Bucked Up Creatine Monohydrate",
+      "name": "Drissa",
+      "lastName": "Kande",
+      "newOrderEmail": "12@gmail.com",
+      "newOrderStreet": "116 street",
+      "newOrderCity": "Linden",
+      "newOrderState": "NJ",
+      "newOrderZipCode": "10026",
+      "newOrderCountry": "United States of America",
+      "newOrderQuantity": "3",
+      "id": 3
     }
   ],
   "subscribers": [
