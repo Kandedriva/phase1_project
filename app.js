@@ -201,11 +201,8 @@ function newSubscriber(subscriber){
     const followerList = document.createElement("div");
     removeAFollower.textContent = "delete";
 
-
-
     followerList.setAttribute("class", "followerList");
     removeAFollower.setAttribute("class", "bttn btn btn-outline-danger")
-
 
     followerList.appendChild(liName);
     followerList.appendChild(liEmail);
@@ -215,12 +212,13 @@ liName.textContent = subscriber.userName;
 liEmail.textContent = subscriber.email;
 subscribersContainer.appendChild(followerList);
 
+//DELETE request for the subscribers
 removeAFollower.addEventListener("click", event=>{
     followerList.remove();
-    fetch(`http://localhost:3000/subscribers,${subscriber.id}`, {method: "DELETE"})
+    fetch(`http://localhost:3000/subscribers/${subscriber.id}`, {method: "DELETE"})
     .then(response=>response.json())
     .then(data=>console.log(data));
-})
+});
 
 }
 

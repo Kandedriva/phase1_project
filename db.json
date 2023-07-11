@@ -13,6 +13,13 @@
       "image": "images/sneaker.png",
       "description": "Knit construction provides lightweight flexibility and breathable.Our running shoes let your foot always keeps dry and cool.",
       "price": "$45.99"
+    },
+    {
+      "id": 2,
+      "name": "Bucked Up Creatine Monohydrate",
+      "image": "images/Gym-product.png",
+      "description": "Complements your Workouts, for Daily Life, and Focus in the Gym.",
+      "price": "$15.36"
     }
   ],
   "orders": [
@@ -34,11 +41,6 @@
       "id": 0,
       "userName": "Shikan's",
       "email": "shikan123@gmail.com"
-    },
-    {
-      "userName": "12Best",
-      "email": "storeshopify825@gmail.com",
-      "id": 1
     }
   ]
 }
