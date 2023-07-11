@@ -9,6 +9,12 @@ img{
     height: 15%;
 }
 
+.navbar img{
+    width: 25%;
+    height: 25%;
+    border-radius: 100%;
+}
+
 .personalInfo{
     margin-top: 10px;
     text-align: center;
