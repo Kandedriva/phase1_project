@@ -27,18 +27,6 @@
       "newOrderZipCode": "911",
       "newOrderCountry": "United state",
       "newOrderQuantity": "5"
-    },
-    {
-      "name": "Drissa",
-      "lastName": "Kande",
-      "newOrderEmail": "12@gmail.com",
-      "newOrderStreet": "116 street",
-      "newOrderCity": "New York",
-      "newOrderState": "NJ",
-      "newOrderZipCode": "10026",
-      "newOrderCountry": "United States of America",
-      "newOrderQuantity": "9",
-      "id": 7
     }
   ],
   "subscribers": [
@@ -48,14 +36,9 @@
       "email": "shikan123@gmail.com"
     },
     {
-      "id": 1,
-      "userName": "Tyson",
-      "email": "thebest@store.com"
-    },
-    {
-      "id": 2,
-      "userName": "LeeYang",
-      "email": "yang2@yahoo.com"
+      "userName": "12Best",
+      "email": "storeshopify825@gmail.com",
+      "id": 1
     }
   ]
 }

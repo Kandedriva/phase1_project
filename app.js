@@ -1,9 +1,11 @@
+
+// Global Variables
 const imageInfo = document.getElementById("imageInfo");
 const orderForm = document.getElementById("orderForm");
-const list = document.getElementById("followers");
-const form = document.getElementById("follow");
-// const newOrderName = document.getElementById("uName");
-// const newOrderEmail = document.getElementById("uEmail");
+const subscribersContainer = document.getElementById("followers");
+const followers = document.getElementById("follow");
+const newOrderName = document.getElementById("uName");
+const newOrderEmail = document.getElementById("uEmail");
 const button = document.getElementById("button");
 const checkOutButton = document.getElementById("checkOutButton");
 const customerFName = document.getElementById("fName");
@@ -38,7 +40,7 @@ function createAnOrder(order){
         const deleteButton = document.createElement("button");
 
         deleteButton.textContent = "Order completed";
-        deleteButton.setAttribute("class", "bttn")
+        deleteButton.setAttribute("class", "bttn btn btn-outline-danger")
 
         firstName.textContent = (" First Name: " + order.name);
         lastName.textContent = (" Last Name: " + order.lastName);
@@ -63,6 +65,7 @@ function createAnOrder(order){
         eachOrderContainer.appendChild(quantity);
         eachOrderContainer.appendChild(deleteButton);
 
+// Delete Request to delete an order
             orderPlaced.appendChild(eachOrderContainer);
             deleteButton.addEventListener("click", event=>{
                 eachOrderContainer.remove();
@@ -71,8 +74,6 @@ function createAnOrder(order){
                   .then(data=>console.log(data))
                
             })
-
-
 }
 
 
@@ -191,20 +192,71 @@ orderForm.style.visibility = "hidden";
 });
 
 // Fetch for subscribers
+
+//the fuction to create a subscriber
+function newSubscriber(subscriber){
+    const liName = document.createElement("li");
+    const liEmail = document.createElement("p");
+    const removeAFollower = document.createElement("button");
+    const followerList = document.createElement("div");
+    removeAFollower.textContent = "delete";
+
+
+
+    followerList.setAttribute("class", "followerList");
+    removeAFollower.setAttribute("class", "bttn btn btn-outline-danger")
+
+
+    followerList.appendChild(liName);
+    followerList.appendChild(liEmail);
+    followerList.appendChild(removeAFollower);
+
+liName.textContent = subscriber.userName;
+liEmail.textContent = subscriber.email;
+subscribersContainer.appendChild(followerList);
+
+removeAFollower.addEventListener("click", event=>{
+    followerList.remove();
+    fetch(`http://localhost:3000/subscribers,${subscriber.id}`, {method: "DELETE"})
+    .then(response=>response.json())
+    .then(data=>console.log(data));
+})
+
+}
+
+// GET request for subscribers
 fetch("http://localhost:3000/subscribers")
 .then(response => response.json())
 .then(subscribers =>{
     console.log(subscribers);
-    subscribers.forEach(subscriber=>{
-        const liName = document.createElement("li");
-    const liEmail = document.createElement("p");
+    subscribers.forEach(newSubscriber);
+});
 
-liName.textContent = subscriber.userName;
-liEmail.textContent = subscriber.email;
-list.appendChild(liName);
-list.appendChild(liEmail);
+followers.addEventListener("submit", event=>{
+    event.preventDefault();
+    console.log(event);
 
-    })
+// Create a subscriber
+   const subscriber = {
+    userName: newOrderName.value,
+    email: newOrderEmail.value
+    }
+
+    // POST resquest for subscribers
+fetch("http://localhost:3000/subscribers", {
+    method: "POST",
+    headers: {
+       "content-type": "application/json"
+    },
+    body:JSON.stringify(subscriber)
+})
+.then(response=>response.json())
+.then(newFollower=>{
+    console.log(newFollower);
+    newSubscriber(newFollower)
+})
+followers.reset();
+
 })
 
 
