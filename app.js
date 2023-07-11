@@ -129,7 +129,6 @@ fetch(" http://localhost:3000/products")
         imageInfo.appendChild(imageDescriptionName)
         imageInfo.appendChild(imageDescription);
         imageInfo.appendChild(imageDescriptionPrice)
-
         imageInfo.appendChild(btn1);
         imageInfo.appendChild(btn2);
     

@@ -18,8 +18,15 @@
       "id": 2,
       "name": "Bucked Up Creatine Monohydrate",
       "image": "images/Gym-product.png",
-      "description": "Complements your Workouts, for Daily Life, and Focus in the Gym.",
+      "description": "Complements your Workouts, for Daily Life, and Focus in the Gym. Ultra High Quality Creatine Monohydrate - Manufactured in a GMP Compliant Facility that is FDA Registered",
       "price": "$15.36"
+    },
+    {
+      "id":3,
+      "name": "adidas Unisex Defender 4 Small Duffel Bag",
+      "image":"images/Adidasbag.png",
+      "description": "100% Polyester, Imported, 100% Recycled Polyester lining, 25 shoulder drop, Extra roomy main compartment that stands tall for easy packing",
+      "price": "$21.00"
     }
   ],
   "orders": [

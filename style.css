@@ -21,7 +21,6 @@ img{
 }
 .payementInfo{
     text-align: center;
-    /* margin-top: 5%; */
     margin-bottom: 5%;
     padding-top: 20px;
 }
@@ -50,11 +49,9 @@ img{
 }
 
 .bttn{
-    /* background-color: rgb(86, 157, 238); */
     margin: 5px;
     border-radius: 5px;
     padding: 3px;
-    /* color: white; */
 }
 
 footer{
@@ -73,6 +70,9 @@ footer{
 }
 .eachProdcut{
     display: inline-block;
+    border-style: solid;
+    border-color: antiquewhite;
+    margin-top: 5px;
     width: 35%;
     height: 35%;
     margin-right: 10px;
