@@ -20,7 +20,7 @@ const quantity = document.getElementById("quantity");
 
 
 
-orderForm.style.visibility = "hidden";
+// orderForm.style.visibility = "hidden";
 
 // Funsction to Create New Orders
 function createAnOrder(order){

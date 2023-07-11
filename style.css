@@ -19,7 +19,7 @@ img{
     padding-left: 15px;
     text-align: center;
 }
-.payementInfo{
+.AddressInfo{
     text-align: center;
     margin-bottom: 5%;
     padding-top: 20px;
@@ -27,7 +27,7 @@ img{
 
 
 .check{
-    margin-top: 30px;
+    margin: 30px 30px 0 0;
 }
 .subscribe {
     text-align: center;
@@ -103,4 +103,15 @@ footer{
 .newFollower{
     padding-right: 80%;
     padding-top: 2px;
+}
+.paymentInfo{
+    margin-top: 30px;
+    padding: 0 400px 0 400px;
+}
+.pay{
+    margin: 10px;
+}
+.h3{
+    text-align: center;
+    margin-top: 2%;
 }
