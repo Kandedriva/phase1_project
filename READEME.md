@@ -8,7 +8,7 @@ STORE LOGO;
 An online store website for selling products to customers worldwide.
 
 # PROJECT DESCRIPTION
-This is a school project. The instructions ask for a single page that's why you will see everything (the subscribers list and the orders list on the same page). On this single-page website, you can see the products with their prices, you can choose the product you like and want to buy, and you choose whether to add it to your cart or buy it directly. if you choose to buy directly, you'll see a form to enter your information and submit your order, which'll be added to the order list.
+This is a school project. The instructions ask for a single page that's why you will see everything (the subscribers list and the orders list on the same page). On this single-page website, you can see the products with their prices, you can choose the product you like and want to buy, and you choose whether to add it to your cart or buy it directly. If you choose to buy directly, you'll see a form to enter your information and submit your order, which'll be added to the order list.
 Also, there is a form for customers who are interested in staying up to date with the store, they can enter their user name and email, and they'll be added to the Subscribers list.
 
 ## USAGE
