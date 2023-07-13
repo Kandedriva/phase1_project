@@ -67,16 +67,17 @@
                 </label><br>
 
                 <h3 class="h3">Payement</h3>
+                <p>Credit card or debit card</p>
+
 
                 <div class="row paymentInfo"> 
-                    
-
-                    <div class="card-fName pay">
+                    <br><div class="card-fName pay">
                         <label for="card-name">Name on the card</label><br>
                         <input type="text" id="card-name" required>
                         <br><small class="text-muted">Full name as displayed on card</small>
                         
                     </div>
+                    
                     <div class="crediCard-number pay ">
                         <label for="creditCard">Credit card number</label><br>
                         <input type="number" id="creditCard">
@@ -100,7 +101,22 @@
                         <input type="number" id="quantity" class="numbOrder">
 
                     </div>
-                  
+                   <br> <div>
+                        <div class="d-block my-3">
+                            <div class="custom-control custom-radio">
+                              <input id="google" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                              <label class="custom-control-label" for="google">Google pay</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                              <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                              <label class="custom-control-label" for="debit">Apple pay</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                              <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                              <label class="custom-control-label" for="paypal">Paypal</label>
+                            </div>
+                          </div>
+                    </div>
                 </div>
 
             <button class=" check btn btn-primary">Continue to Checkout</button>
