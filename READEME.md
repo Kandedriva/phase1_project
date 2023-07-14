@@ -11,7 +11,7 @@ An online store website for selling products to customers worldwide.
 This is a school project. The instructions ask for a single page that's why you will see everything (the subscribers list and the orders list on the same page). On this single-page website, you can see the products with their prices, you can choose the product you like and want to buy, and you choose whether to add it to your cart or buy it directly. If you choose to buy directly, you'll see a form to enter your information and submit your order, which'll be added to the order list.
 Also, there is a form for customers who are interested in staying up to date with the store, they can enter their user name and email, and they'll be added to the Subscribers list.
 
-## USAGE
+# USAGE
 To use this single-page ONLINE STORE
 .Head to the web page
 .Click on the product you want to buy
@@ -19,7 +19,7 @@ To use this single-page ONLINE STORE
 . Fill out the checkout form and submit your order.
 .And enter your email and user name if you want to stay up to date.
 
-### Technologies Used.
+# Technologies Used.
 To Create this project, I used:
 .HTML/CSS: Markup and styling of web pages
 .Bootstrap: responsive and modern designs
@@ -27,7 +27,7 @@ To Create this project, I used:
 .Fontawesome: Styling the footer and some other part
 .Local db.json: Storing data for the project.
 
-### Contributing
+# Contributing
 In the future, I would like to change this page to make a real web page on the Internet where can make a real purchase so
 Contributions to the Online Store Website are welcome! To contribute:
 
