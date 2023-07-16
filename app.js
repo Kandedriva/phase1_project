@@ -1,6 +1,6 @@
 
 // Global Variables
-const imageInfo = document.getElementById("imageInfo");
+const itemContainer = document.getElementById("itemContainer");
 const orderForm = document.getElementById("orderForm");
 const subscribersContainer = document.getElementById("followers");
 const followers = document.getElementById("follow");
@@ -18,8 +18,6 @@ const zipCode = document.getElementById("zip");
 const country = document.getElementById("country");
 const quantity = document.getElementById("quantity");
 const ProductName = document.getElementById("product-name");
-
-
 
 
 orderForm.style.visibility = "hidden";
@@ -56,7 +54,7 @@ fetch(" http://localhost:3000/products")
         productsContainer.appendChild(eachProductContainer);
 
         eachProductContainer.addEventListener("click", (event)=>{
-            imageInfo.innerHTML = "";
+            itemContainer.innerHTML = "";
             const imageDescription = document.createElement("p");
             const imageDescriptionName = document.createElement("h5");
             const imageDescriptionPrice = document.createElement("p");
@@ -73,12 +71,12 @@ fetch(" http://localhost:3000/products")
         btn1.setAttribute("class", "bttn btn btn-success");
         btn2.setAttribute("class", "bttn btn btn-success");
     
-        imageInfo.appendChild(img);
-        imageInfo.appendChild(imageDescriptionName)
-        imageInfo.appendChild(imageDescription);
-        imageInfo.appendChild(imageDescriptionPrice)
-        imageInfo.appendChild(btn1);
-        imageInfo.appendChild(btn2);
+        itemContainer.appendChild(img);
+        itemContainer.appendChild(imageDescriptionName)
+        itemContainer.appendChild(imageDescription);
+        itemContainer.appendChild(imageDescriptionPrice)
+        itemContainer.appendChild(btn1);
+        itemContainer.appendChild(btn2);
     
         btn1.addEventListener("click", (event)=>{
             alert("Added to your Cart")
@@ -157,9 +155,7 @@ fetch("http://localhost:3000/orders")
 .then(response=>response.json())
 .then(orders=>{
     console.log(orders);
-
     orders.forEach(createAnOrder)
-
 });
 
 // Create New Orders
@@ -210,11 +206,9 @@ function newSubscriber(subscriber){
 
     followerList.setAttribute("class", "followerList");
     removeAFollower.setAttribute("class", "bttn btn btn-outline-danger")
-
     followerList.appendChild(liName);
     followerList.appendChild(liEmail);
     followerList.appendChild(removeAFollower);
-
 liName.textContent = subscriber.userName;
 liEmail.textContent = subscriber.email;
 subscribersContainer.appendChild(followerList);
