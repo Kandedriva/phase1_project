@@ -26,13 +26,13 @@ img{
     background-image: linear-gradient(#eeaeae,#fafafa);
 
 }
-.personalInfo{
+.paymentOption{
     margin-top: 10px;
     text-align: center;
 
 }
 
-.personInfo{
+.personalInformation{
     padding-left: 15px;
     text-align: center;
 }
@@ -133,6 +133,7 @@ footer{
     margin-top: 1%;
 }
 #orderForm{
+    padding: 1%;
     background-color:rgba(238, 238, 238, 0.712);
 }
 .logo{
