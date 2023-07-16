@@ -25,11 +25,6 @@ const ProductName = document.getElementById("product-name");
 
 orderForm.style.display = "none";
 
-// Funsction to Create New Orders
-
-
-
-
 // Get request to render the products
 fetch(" http://localhost:3000/products")
 .then(response =>response.json())
@@ -97,6 +92,7 @@ fetch(" http://localhost:3000/products")
     
 });
 
+// Function to Create New Orders
 
 function createAnOrder(order){
     const firstName = document.createElement("p");

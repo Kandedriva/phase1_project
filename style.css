@@ -6,6 +6,10 @@ h1{
     text-align: center;
 }
 
+h2{
+    text-align: center;
+}
+
 a{
     margin: 10px;
    
@@ -89,6 +93,8 @@ footer{
     padding-right: 3px;
 }
 .eachProdcut{
+    padding: 3%;
+    text-align: center;
     display: inline-block;
     border-style: solid;
     border-color: antiquewhite;
