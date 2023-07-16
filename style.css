@@ -4,16 +4,20 @@ h1{
     text-align: center;
 }
 
+a{
+    margin: 10px;
+   
+    }
 img{
     width: 15%;
     height: 15%;
 }
 
-.navbar img{
-    width: 25%;
-    height: 25%;
+/* .logo img{
+    width: 15%;
+    height: 15%;
     border-radius: 100%;
-}
+} */
 
 .personalInfo{
     margin-top: 10px;
@@ -123,4 +127,7 @@ footer{
 }
 #orderForm{
     background-color:rgba(238, 238, 238, 0.712);
+}
+.navbar{
+    padding: 2px 0 2px 0;
 }

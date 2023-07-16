@@ -29,34 +29,7 @@
       "price": "$21.00"
     }
   ],
-  "orders": [
-    {
-      "itemName": "Bucked Up Creatine Monohydrate",
-      "name": "Drissa",
-      "lastName": "Kande",
-      "newOrderEmail": "12@gmail.com",
-      "newOrderStreet": "116 street",
-      "newOrderCity": "Linden",
-      "newOrderState": "NJ",
-      "newOrderZipCode": "10026",
-      "newOrderCountry": "United States of America",
-      "newOrderQuantity": "3",
-      "id": 3
-    },
-    {
-      "itemName": "Magin-gun",
-      "name": "Drissa",
-      "lastName": "Kande",
-      "newOrderEmail": "12@gmail.com",
-      "newOrderStreet": "116 street",
-      "newOrderCity": "New York",
-      "newOrderState": "NJ",
-      "newOrderZipCode": "10026",
-      "newOrderCountry": "United States of America",
-      "newOrderQuantity": "2",
-      "id": 4
-    }
-  ],
+  "orders": [],
   "subscribers": [
     {
       "id": 0,
