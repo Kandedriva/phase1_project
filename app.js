@@ -1,5 +1,7 @@
 
 // Global Variables
+const orderPlaced = document.getElementById("orderPlaced");
+const eachSubscriber = document.getElementById("eachSubscriber");
 const itemContainer = document.getElementById("itemContainer");
 const orderForm = document.getElementById("orderForm");
 const subscribersContainer = document.getElementById("followers");
@@ -83,7 +85,10 @@ fetch(" http://localhost:3000/products")
         });
         btn2.addEventListener("click", ()=>{
             orderForm.style.visibility = "visible";
-            form.style.display = "none";    
+            productsContainer.style.display = "none";
+            followers.style.display ="none";
+            orderPlaced.style.display = "none";
+            eachSubscriber.style.display = "none"
         });
    
     });
@@ -103,7 +108,6 @@ function createAnOrder(order){
         const country = document.createElement("p");
         const zipCode = document.createElement("p");
         const quantity = document.createElement("p");
-        const orderPlaced = document.getElementById("orderPlaced");
         const address = document.createElement("div");
         const eachOrderContainer = document.createElement("div");
         eachOrderContainer.setAttribute("class", "eachOrder");
