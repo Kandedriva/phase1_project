@@ -29,12 +29,31 @@
       "price": "$21.00"
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "itemName": "Bucked Up Creatine Monohydrate",
+      "name": "Drivano",
+      "lastName": "kande",
+      "newOrderEmail": "8425@gmail.com",
+      "newOrderStreet": "116 street",
+      "newOrderCity": "New York",
+      "newOrderState": "NY",
+      "newOrderZipCode": "10026",
+      "newOrderCountry": "United States of America",
+      "newOrderQuantity": "2",
+      "id": 1
+    }
+  ],
   "subscribers": [
     {
       "id": 0,
       "userName": "Shikan's",
       "email": "shikan123@gmail.com"
+    },
+    {
+      "userName": "Ragnar",
+      "email": "8425@gmail.com",
+      "id": 1
     }
   ]
 }
