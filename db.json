@@ -42,6 +42,19 @@
       "newOrderCountry": "United States of America",
       "newOrderQuantity": "2",
       "id": 1
+    },
+    {
+      "itemName": "Magin-gun",
+      "name": "Drissa",
+      "lastName": "Kande",
+      "newOrderEmail": "12@gmail.com",
+      "newOrderStreet": "116 street",
+      "newOrderCity": "New York",
+      "newOrderState": "NJ",
+      "newOrderZipCode": "10026",
+      "newOrderCountry": "United States of America",
+      "newOrderQuantity": "5",
+      "id": 3
     }
   ],
   "subscribers": [
@@ -54,6 +67,11 @@
       "userName": "Ragnar",
       "email": "8425@gmail.com",
       "id": 1
+    },
+    {
+      "userName": "Kande",
+      "email": "8425@gmail.com",
+      "id": 2
     }
   ]
 }

@@ -1,5 +1,6 @@
 
 // Global Variables
+const productsContainer = document.getElementById("products");
 const orderPlaced = document.getElementById("orderPlaced");
 const eachSubscriber = document.getElementById("eachSubscriber");
 const itemContainer = document.getElementById("itemContainer");
@@ -22,7 +23,7 @@ const quantity = document.getElementById("quantity");
 const ProductName = document.getElementById("product-name");
 
 
-orderForm.style.visibility = "hidden";
+orderForm.style.display = "none";
 
 // Funsction to Create New Orders
 
@@ -40,10 +41,8 @@ fetch(" http://localhost:3000/products")
         const productImage = document.createElement("img");
         const productDescription = document.createElement("p");
         const price = document.createElement("p");
-        const productsContainer = document.getElementById("products");
 
         eachProductContainer.setAttribute("class", "eachProdcut")
-
 
         productImage.setAttribute("src", product.image);
         productName.textContent = product.name;
@@ -84,7 +83,8 @@ fetch(" http://localhost:3000/products")
             alert("Added to your Cart")
         });
         btn2.addEventListener("click", ()=>{
-            orderForm.style.visibility = "visible";
+            // Change the visibility of the forms
+            orderForm.style.display = "";
             productsContainer.style.display = "none";
             followers.style.display ="none";
             orderPlaced.style.display = "none";
@@ -195,7 +195,14 @@ fetch("http://localhost:3000/orders", {
     createAnOrder(orders)  
 })
 orderForm.reset();
-orderForm.style.visibility = "hidden";
+
+// Change back the visibility of the forms
+orderForm.style.display = "none";
+productsContainer.style.display = "";
+            followers.style.display ="";
+            orderPlaced.style.display = "";
+            eachSubscriber.style.display = ""
+
 });
 
 // Fetch for subscribers
