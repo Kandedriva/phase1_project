@@ -62,8 +62,8 @@ fetch(" http://localhost:3000/products")
         imageDescription.textContent = product.description;
         imageDescriptionName.textContent = product.name;
         imageDescriptionPrice.textContent = product.price;
-        btn1.textContent = "Add to your car";
-        btn2.textContent = "Buy now.";
+        btn1.textContent = "Add to your Cart";
+        btn2.textContent = "Buy Now.";
         btn1.setAttribute("class", "bttn btn btn-success");
         btn2.setAttribute("class", "bttn btn btn-success");
     
@@ -95,6 +95,7 @@ fetch(" http://localhost:3000/products")
 // Function to Create New Orders
 
 function createAnOrder(order){
+    const orderId = document.createElement("P")
     const firstName = document.createElement("p");
         const lastName = document.createElement("p");
         const email = document.createElement("p");
@@ -112,7 +113,7 @@ function createAnOrder(order){
 
         deleteButton.textContent = "Order completed";
         deleteButton.setAttribute("class", "bttn btn btn-outline-danger");
-
+        orderId.textContent = ("Order Number: " + order.id);
         firstName.textContent = (" First Name: " + order.name);
         lastName.textContent = (" Last Name: " + order.lastName);
         email.textContent = ("Email: " + order.newOrderEmail);
@@ -130,6 +131,7 @@ function createAnOrder(order){
         address.appendChild(country);
         address.appendChild(zipCode)
 
+        eachOrderContainer.appendChild(orderId);
         eachOrderContainer.appendChild(item);
         eachOrderContainer.appendChild(firstName);
         eachOrderContainer.appendChild(lastName);
