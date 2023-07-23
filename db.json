@@ -55,7 +55,36 @@
       "newOrderCountry": "United States of America",
       "newOrderQuantity": "1",
       "id": 2
+    },
+    {
+      "itemName": "adidas Unisex Defender 4 Small Duffel Bag",
+      "name": "Tyson",
+      "lastName": "Ice",
+      "newOrderEmail": "ice@gmail.com",
+      "newOrderStreet": "842 street",
+      "newOrderCity": "Ontarion",
+      "newOrderState": "Toronto",
+      "newOrderZipCode": "40078",
+      "newOrderCountry": "Canada",
+      "newOrderQuantity": "1",
+      "id": 3
     }
   ],
-  "subscribers": []
+  "subscribers": [
+    {
+      "userName": "Kande",
+      "email": "12@gmail.com",
+      "id": 1
+    },
+    {
+      "userName": "Ragnar",
+      "email": "8425@gmail.com",
+      "id": 2
+    },
+    {
+      "userName": "Shikan",
+      "email": "skn12@gmail.com",
+      "id": 3
+    }
+  ]
 }
