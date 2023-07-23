@@ -265,6 +265,11 @@ fetch("http://localhost:3000/subscribers", {
 })
 followers.reset();
 
+});
+document.addEventListener("DOMContentLoaded", function(){
+    let currentYear = new Date().getFullYear();
+    let copyRight = document.getElementById("copyRight");
+    copyRight.textContent = currentYear;
 })
 
 
